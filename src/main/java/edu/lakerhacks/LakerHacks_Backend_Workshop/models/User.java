@@ -21,7 +21,6 @@ public class User {
     String email;
     String name;
     ArrayList<User> friends;
-    ArrayList<Post> posts;
 
     /**
      * Empty constructor needed for retrieving the POJO (plain old java object)
@@ -33,10 +32,5 @@ public class User {
         this.email = email;
         this.name = name;
         this.friends = new ArrayList<>();
-        this.posts = new ArrayList<>();
-    }
-
-    public Post getPostByIndex(int i){
-        return posts.get(i);
     }
 }
