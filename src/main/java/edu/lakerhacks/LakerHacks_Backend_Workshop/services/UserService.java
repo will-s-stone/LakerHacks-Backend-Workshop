@@ -12,10 +12,12 @@ public class UserService {
     UserRepository userRepository;
 
     public User addUser(User user){
-        if (userRepository.existsById(user.getUsername())){
-            userRepository.save(user);
-        }
+        userRepository.save(user);
         return user;
+    }
+
+    public User getUserByUsername(String username){
+        return userRepository.findById(username).get();
     }
 
 }

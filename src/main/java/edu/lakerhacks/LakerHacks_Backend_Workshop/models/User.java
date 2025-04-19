@@ -6,8 +6,6 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.ArrayList;
-import java.util.List;
 
 //Add lombok Data annotation, getter, and setter
 //Indicate the document collection
@@ -20,7 +18,6 @@ public class User {
     String username;
     String email;
     String name;
-    ArrayList<User> friends;
 
     /**
      * Empty constructor needed for retrieving the POJO (plain old java object)
@@ -31,6 +28,5 @@ public class User {
         this.username = username;
         this.email = email;
         this.name = name;
-        this.friends = new ArrayList<>();
     }
 }
