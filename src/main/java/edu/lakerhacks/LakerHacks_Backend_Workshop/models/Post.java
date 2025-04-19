@@ -24,13 +24,16 @@ public class Post {
     /**
      * Empty constructor needed for retrieving the POJO (plain old java object)
      */
-    public Post(){}
+    public Post(){
+        comments = new ArrayList<>();
+    }
 
     public Post(String id, User author, String content, String date){
         this.id = id;
         this.author = author;
         this.content = content;
         this.date = date;
+        comments = new ArrayList<>();
     }
 
 }
